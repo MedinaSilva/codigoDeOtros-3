@@ -17,7 +17,7 @@ for (let i = 0; i < productos.length; i++) {
 
   var ti = document.createElement("p")
   ti.classList.add("titulo")
-  ti.textContent = productos[i].nombre
+  ti.textContent = productos[i].nombre;
   
   var imagen = document.createElement("img");
   imagen.setAttribute('src', productos[i].img);
@@ -25,11 +25,13 @@ for (let i = 0; i < productos.length; i++) {
   d.appendChild(ti)
   d.appendChild(imagen)
 
-  li.appendChild(d)
+  /* li.appendChild(d) */
 }
 
-displayProductos(productos)
+function displayProductos(productos){
 const botonDeFiltro = document.querySelector("button");
+}
+var botonDeFiltro;
 
 botonDeFiltro.onclick = function() {
   while (li.firstChild) {
@@ -58,6 +60,6 @@ botonDeFiltro.onclick = function() {
   }
 }
 
-const filtrado = (productos = [], texto) => {
+const filtrado = (productos = [i], texto) => {
   return productos.filter(item => item.tipo.includes(texto) || item.color.includes(texto));
 }  
