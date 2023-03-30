@@ -10,14 +10,15 @@ const productos = [
 
 const li = document.getElementsByName("lista-de-productos")
 const $i = document.querySelector('.input');
+console.log($i)
 
-for (let i = 0; i < productos.length; i++) {
-  var d = document.createElement("div")
-  d.classList.add("producto")
+  for(let i =0;i<productos.length; i++){
+    var d = document.createElement('div')
+    d.classList.add("producto")
 
-  var ti = document.createElement("p")
-  ti.classList.add("titulo")
-  ti.textContent = productos[i].nombre;
+    var ti = document.createElement("p")
+    ti.classList.add("titulo")
+    ti.textContent = productos[i].nombre;
   
   var imagen = document.createElement("img");
   imagen.setAttribute('src', productos[i].img);
@@ -25,13 +26,11 @@ for (let i = 0; i < productos.length; i++) {
   d.appendChild(ti)
   d.appendChild(imagen)
 
-  /* li.appendChild(d) */
+   li.appendChild(d)
 }
 
-function displayProductos(productos){
+//desplegar productos
 const botonDeFiltro = document.querySelector("button");
-}
-var botonDeFiltro;
 
 botonDeFiltro.onclick = function() {
   while (li.firstChild) {
